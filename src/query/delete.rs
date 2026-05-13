@@ -108,7 +108,7 @@ impl DeleteStatement {
     ///
     /// assert_eq!(
     ///     query.to_string(MysqlQueryBuilder),
-    ///     r#"DELETE FROM `glyph` WHERE `id` = 1"#
+    ///     r#"DELETE FROM `glyph` WHERE `id` = 1 RETURNING `id`"#
     /// );
     /// assert_eq!(
     ///     query.to_string(PostgresQueryBuilder),
@@ -139,7 +139,7 @@ impl DeleteStatement {
     ///
     /// assert_eq!(
     ///     query.to_string(MysqlQueryBuilder),
-    ///     r#"DELETE FROM `glyph` WHERE `id` = 1"#
+    ///     r#"DELETE FROM `glyph` WHERE `id` = 1 RETURNING `id`"#
     /// );
     /// assert_eq!(
     ///     query.to_string(PostgresQueryBuilder),
@@ -172,7 +172,7 @@ impl DeleteStatement {
     ///
     /// assert_eq!(
     ///     query.to_string(MysqlQueryBuilder),
-    ///     r#"DELETE FROM `glyph` WHERE `id` = 1"#
+    ///     r#"DELETE FROM `glyph` WHERE `id` = 1 RETURNING *"#
     /// );
     /// assert_eq!(
     ///     query.to_string(PostgresQueryBuilder),
